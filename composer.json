@@ -1,0 +1,61 @@
+{
+    "name": "vipertecpro/pausewall-usage",
+    "description": "Read-only app usage for NativePHP: how long each app was used today or over the last 7 days, from PHP. A free, tiny companion to Pausewall for NativePHP. Android only; iOS reports unsupported.",
+    "type": "nativephp-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vipul Walia (vipertecpro)",
+            "email": "support@vipertecpro.com"
+        }
+    ],
+    "homepage": "https://vipertecpro.com/products/pausewall",
+    "keywords": [
+        "nativephp",
+        "mobile",
+        "usage-stats",
+        "screen-time",
+        "digital-wellbeing",
+        "app-usage",
+        "android",
+        "free"
+    ],
+    "require": {
+        "php": "^8.4",
+        "nativephp/mobile": "^4.6"
+    },
+    "require-dev": {
+        "illuminate/container": "^13.35",
+        "illuminate/http": "^13.35",
+        "pestphp/pest": "^3.0|^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vipertecpro\\PausewallUsage\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vipertecpro\\PausewallUsage\\PausewallUsageServiceProvider"
+            ],
+            "aliases": {
+                "PausewallUsage": "Vipertecpro\\PausewallUsage\\Facades\\PausewallUsage"
+            }
+        },
+        "nativephp": {
+            "manifest": "nativephp.json"
+        }
+    },
+    "scripts": {
+        "test": "pest",
+        "test:android": "tests/native/android/typecheck.sh",
+        "test:ios": "tests/native/ios/typecheck.sh"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
+        "sort-packages": true
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "name": "vipertecpro/pausewall-usage",
+    "version": "1.0.0",
+    "description": "Read-only app usage for NativePHP: how long each app was used today or over the last 7 days, from PHP. A free, tiny companion to Pausewall for NativePHP. Android only; iOS reports unsupported.",
+    "namespace": "PausewallUsage",
+    "keywords": [
+        "nativephp",
+        "mobile",
+        "usage-stats",
+        "screen-time",
+        "digital-wellbeing",
+        "app-usage",
+        "android",
+        "free"
+    ],
+    "bridge_functions": [
+        {
+            "name": "PausewallUsage.Permission",
+            "android": "com.vipertecpro.plugins.pausewallusage.PausewallUsageFunctions.Permission",
+            "ios": "PausewallUsageFunctions.Permission",
+            "description": "Report the Usage access status: granted, denied, notDetermined or unsupported"
+        },
+        {
+            "name": "PausewallUsage.RequestPermission",
+            "android": "com.vipertecpro.plugins.pausewallusage.PausewallUsageFunctions.RequestPermission",
+            "ios": "PausewallUsageFunctions.RequestPermission",
+            "description": "Open the Usage access settings screen for the app (show your own disclosure first)"
+        },
+        {
+            "name": "PausewallUsage.Usage",
+            "android": "com.vipertecpro.plugins.pausewallusage.PausewallUsageFunctions.Usage",
+            "ios": "PausewallUsageFunctions.Usage",
+            "description": "Foreground time and opens per app for the last 1 to 7 days, newest day first (Android)"
+        },
+        {
+            "name": "PausewallUsage.Today",
+            "android": "com.vipertecpro.plugins.pausewallusage.PausewallUsageFunctions.Today",
+            "ios": "PausewallUsageFunctions.Today",
+            "description": "Today's total foreground time and the most used apps (Android)"
+        }
+    ],
+    "events": [],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "pricing": {
+        "type": "free"
+    },
+    "category": "productivity",
+    "license": "MIT",
+    "author": {
+        "name": "Vipul Walia (vipertecpro)",
+        "email": "support@vipertecpro.com",
+        "url": "https://github.com/vipertecpro"
+    },
+    "homepage": "https://vipertecpro.com/products/pausewall",
+    "repository": "https://github.com/vipertecpro/pausewall-usage",
+    "funding": [],
+    "icon": "resources/icon.png",
+    "android": {
+        "min_version": 29,
+        "permissions": [
+            "<uses-permission android:name=\"android.permission.PACKAGE_USAGE_STATS\" tools:ignore=\"ProtectedPermissions\" />",
+            "<queries><intent><action android:name=\"android.intent.action.MAIN\" /><category android:name=\"android.intent.category.LAUNCHER\" /></intent></queries>"
+        ],
+        "repositories": [],
+        "dependencies": {
+            "implementation": []
+        },
+        "activities": [],
+        "services": [],
+        "receivers": [],
+        "providers": []
+    },
+    "ios": {
+        "min_version": "18.0",
+        "info_plist": {},
+        "entitlements": {},
+        "repositories": [],
+        "dependencies": {
+            "swift_packages": [],
+            "pods": []
+        }
+    },
+    "components": [],
+    "assets": {
+        "android": [],
+        "ios": []
+    },
+    "secrets": [],
+    "service_provider": "Vipertecpro\\PausewallUsage\\PausewallUsageServiceProvider"
+}
