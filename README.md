@@ -94,6 +94,45 @@ Settings, so `requestPermission()` takes them to that screen. Re-check `permissi
 when your app comes back to the front. Until it is `Granted`, `usage()` and `today()`
 return empty results and `lastReason()` is `permissionMissing`.
 
+## What you can build
+
+Pausewall Usage is a building block: reading the numbers is done, and the screen
+around them is yours. Ask for Usage access only when showing app usage is part of
+what your app is for, show your disclosure first (see the Google Play section), and
+keep the numbers on the phone unless the person chooses to share them.
+
+**Habits and wellbeing**
+
+- **Screen-time dashboards.** Show today's total with `today()`, the most used apps
+  with their opens, and a 7-day trend from `usage(7)`, all on one screen.
+- **Habit goals.** Let people set a goal such as "under an hour of social apps a day"
+  or "fewer than 20 opens", then compare it with `today()` and show their progress.
+- **Wellbeing journals.** Put today's numbers next to a short note or mood the person
+  writes each evening, so they can see how the two relate over time.
+- **Weekly summaries.** Build a Sunday recap that compares each day of the week and
+  names the top app. The plugin reads up to 7 days, so save each day in your app's own
+  database on the phone if you want a longer history.
+
+**Focus and study**
+
+- **Study trackers for students.** Compare time in study and reading apps with time in
+  games and video apps over the week, and celebrate the good days.
+- **Focus-session check-ins.** After a focus timer ends, show how many times the person
+  opened a distracting app that day, using the `opens` count.
+
+**Families and coaching**
+
+- **Family screen-time check-ins on the child's own phone.** The child installs the app,
+  sees their own numbers and agrees to what is shown. Sharing with a parent's phone
+  needs your own backend and the child's knowledge; never hide the app or collect
+  quietly.
+- **Digital-wellbeing coaching.** A person shares their weekly summary with a coach when
+  they choose to. Sending it anywhere needs your own backend and explicit consent.
+
+When people want to act on the numbers, not just read them, Pausewall for NativePHP adds
+blocking, limits and schedules with the same counting rules (see the last section).
+Everything here is Android only; on iOS every call answers `unsupportedOnIos`.
+
 ## Google Play
 
 Usage access shows which apps a person uses and for how long, which Google Play treats
