@@ -1,5 +1,7 @@
 # Pausewall Usage for NativePHP
 
+![Latest version](https://img.shields.io/packagist/v/vipertecpro/pausewall-usage) ![Tests](https://img.shields.io/github/actions/workflow/status/vipertecpro/pausewall-usage/tests.yml?branch=main&label=tests) ![PHP](https://img.shields.io/packagist/dependency-v/vipertecpro/pausewall-usage/php) ![NativePHP Mobile](https://img.shields.io/packagist/dependency-v/vipertecpro/pausewall-usage/nativephp%2Fmobile) ![Platforms](https://img.shields.io/badge/platforms-Android-informational) ![Licence](https://img.shields.io/packagist/l/vipertecpro/pausewall-usage) ![Downloads](https://img.shields.io/packagist/dt/vipertecpro/pausewall-usage)
+
 Find out how long each app was used, from PHP. Ask for today's total and the most
 used apps, or for the last 7 days, newest first, with the name, the foreground time
 and the number of opens of every app. That is all it does. It is read-only: it cannot
